@@ -1,0 +1,38 @@
+.balance {
+  display: flex;
+  width: 350px;
+  height: 80px;
+
+  background: #ffffff;
+  border-radius: 30px;
+  margin-bottom: 30px;
+}
+
+.balance__posicion {
+  display: flex;
+  flex-direction: column;
+  margin: 8px 0 0 40px;
+}
+
+.balance__text {
+  font-family: 'Circe';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  color: #a6a6a6;
+}
+
+.balance__number {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 45px;
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+}
