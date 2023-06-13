@@ -1,0 +1,26 @@
+.modal__backDrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-height: 540px;
+  max-width: 540px;
+  width: 100%;
+  padding: 12px;
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+.button__closeModal {
+  width: 60px;
+  height: 40px;
+}
