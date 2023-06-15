@@ -86,6 +86,7 @@ p {
 }
 
 .container__main {
+  position: relative;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
@@ -132,4 +133,16 @@ p {
   color: #000000;
 
   text-decoration: none;
+}
+
+.modal__iconAdd {
+  position: absolute;
+  right: 10px;
+  bottom: 40px;
+  width: 44px;
+  height: 44px;
+  color: #24cca7;
+}
+
+.modal__iconClose {
 }

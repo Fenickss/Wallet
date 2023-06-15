@@ -20,6 +20,9 @@
   border-radius: 20px;
 }
 
+.button__openModal {
+}
+
 .button__closeModal {
   width: 60px;
   height: 40px;
