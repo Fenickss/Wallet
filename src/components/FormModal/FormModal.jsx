@@ -4,8 +4,21 @@ import s from "../FormModal/FormModal.module.css";
 
 const FormModal = () => {
   const [checked, setChecked] = useState(false);
-  const handleChangeFormSwitch = (nextChecked) => {
+  const [categories, setCategories] = useState("");
+  const [money, setMoney] = useState(0);
+  console.log(categories);
+  console.log(money);
+
+  const ChangeFormSwitch = (nextChecked) => {
     setChecked(nextChecked);
+  };
+
+  const handleChangeCategories = (e) => {
+    setCategories(e.target.value);
+  };
+
+  const handleChangeMoney = (e) => {
+    setMoney(e.target.value);
   };
 
   return (
@@ -14,7 +27,7 @@ const FormModal = () => {
         <Switch
           height={40}
           width={80}
-          onChange={handleChangeFormSwitch}
+          onChange={ChangeFormSwitch}
           checked={checked}
           className={s.react__switch}
           offColor="#4A56E2"
@@ -22,7 +35,12 @@ const FormModal = () => {
         />
 
         {!checked && (
-          <select name="" className={s.selectCategories}>
+          <select
+            name=""
+            value={categories}
+            onChange={handleChangeCategories}
+            className={s.selectCategories}
+          >
             <option className={s.initialSelected} value="">
               Выберите категорию
             </option>
@@ -36,8 +54,14 @@ const FormModal = () => {
         )}
 
         <div className={s.inputPositionMoney}>
-          <input className={s.inputMoney} type="number" placeholder="0.00" />
-          <input className={s.inputDate} type="date" name="" id="" />
+          <input
+            className={s.inputMoney}
+            value={money}
+            onChange={handleChangeMoney}
+            type="number"
+            placeholder="0.00"
+          />
+          <input className={s.inputDate} type="date" name="date" id="" />
         </div>
 
         <input
