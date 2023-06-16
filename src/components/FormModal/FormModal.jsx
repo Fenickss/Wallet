@@ -6,8 +6,11 @@ const FormModal = () => {
   const [checked, setChecked] = useState(false);
   const [categories, setCategories] = useState("");
   const [money, setMoney] = useState(0);
+  const [comments, setComments] = useState("");
+  console.log(checked);
   console.log(categories);
   console.log(money);
+  console.log(comments);
 
   const ChangeFormSwitch = (nextChecked) => {
     setChecked(nextChecked);
@@ -21,9 +24,17 @@ const FormModal = () => {
     setMoney(e.target.value);
   };
 
+  const handleChangeComments = (e) => {
+    setComments(e.target.value);
+  };
+
+  const handleFormSubmit = (e) => {
+    e.preventdefault();
+  };
+
   return (
     <>
-      <form className={s.form__module} action="">
+      <form onSubmit={handleFormSubmit} className={s.form__module} action="">
         <Switch
           height={40}
           width={80}
@@ -66,6 +77,8 @@ const FormModal = () => {
 
         <input
           className={s.Form__Comments}
+          value={comments}
+          onChange={handleChangeComments}
           type="text"
           name=""
           placeholder="Комментарий"
