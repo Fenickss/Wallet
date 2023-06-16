@@ -5,9 +5,9 @@ import ShoppingBalance from "../ShoppingBalance";
 import PriceConverter from "../PriceConverter/PriceConverter";
 import TodoList from "../TodoList";
 
-import { VscChromeClose } from "react-icons/vsc";
-import { MdOutlineClose } from "react-icons/ai";
+import { AiFillPlusCircle } from "react-icons/ai";
 
+import { VscChromeClose } from "react-icons/vsc";
 import Modal from "../Modal";
 import { openModal, closeModal } from "../../redux/modal/modalSlice";
 
@@ -59,18 +59,18 @@ const ShoppingListPage = () => {
             type="submit"
             onClick={() => dispatch(openModal())}
           >
-            <VscChromeClose className={s.modal__iconAdd} />
+            <AiFillPlusCircle className={s.modal__iconAdd} />
           </button>
           {isOpen && (
             <Modal>
-              <h1>TEST</h1>
-              <p>fsdf</p>
+              <h1>Добавить транзакцию</h1>
+              <input type="" />
               <button
                 className={s.button__closeModal}
                 type="submit"
                 onClick={() => dispatch(closeModal())}
               >
-                <MdOutlineClose className={s.modal__iconClose} />
+                <VscChromeClose className={s.modal__iconClose} />
               </button>
             </Modal>
           )}

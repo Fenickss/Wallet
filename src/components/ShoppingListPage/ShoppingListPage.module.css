@@ -135,14 +135,37 @@ p {
   text-decoration: none;
 }
 
-.modal__iconAdd {
+/* 
+Модалка=========================================
+*/
+
+.button__openModal {
   position: absolute;
   right: 10px;
   bottom: 40px;
+
+  border: 0;
+}
+
+.button__closeModal {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: 0;
+}
+
+.modal__iconAdd {
   width: 44px;
   height: 44px;
+
   color: #24cca7;
 }
 
 .modal__iconClose {
+  width: 20px;
+  height: 20px;
 }
+
+/* 
+Контент модалки=======================================================
+*/
