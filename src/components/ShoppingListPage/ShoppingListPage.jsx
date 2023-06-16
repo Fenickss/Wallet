@@ -1,14 +1,16 @@
 import { useDispatch, useSelector } from "react-redux";
 
 import s from "./ShoppingListPage.module.css";
+
 import ShoppingBalance from "../ShoppingBalance";
 import PriceConverter from "../PriceConverter/PriceConverter";
 import TodoList from "../TodoList";
+import Modal from "../Modal";
+import FormModal from "../FormModal/FormModal";
 
 import { AiFillPlusCircle } from "react-icons/ai";
-
 import { VscChromeClose } from "react-icons/vsc";
-import Modal from "../Modal";
+
 import { openModal, closeModal } from "../../redux/modal/modalSlice";
 
 const ShoppingListPage = () => {
@@ -63,8 +65,9 @@ const ShoppingListPage = () => {
           </button>
           {isOpen && (
             <Modal>
-              <h1>Добавить транзакцию</h1>
-              <input type="" />
+              <h1 className={s.modal__title}>Добавить транзакцию</h1>
+
+              <FormModal />
               <button
                 className={s.button__closeModal}
                 type="submit"

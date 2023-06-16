@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
 @import url("https://fonts.cdnfonts.com/css/circe");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 *,
 h1,
@@ -166,6 +167,18 @@ p {
   height: 20px;
 }
 
-/* 
-Контент модалки=======================================================
-*/
+.modal__title {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 45px;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  color: #000000;
+}
