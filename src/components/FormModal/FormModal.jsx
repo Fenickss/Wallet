@@ -6,7 +6,8 @@ const FormModal = () => {
   const [checked, setChecked] = useState(false);
   const [categories, setCategories] = useState("");
   const [money, setMoney] = useState(0);
-  const [comments, setComments] = useState("");
+    const [comments, setComments] = useState("");
+    const [date, setDate] = useState(0);
   console.log(checked);
   console.log(categories);
   console.log(money);
@@ -26,7 +27,10 @@ const FormModal = () => {
 
   const handleChangeComments = (e) => {
     setComments(e.target.value);
-  };
+    };
+    const handleChangeDate = e => {
+        setDate(e.target.value)
+    }
 
   const handleFormSubmit = (e) => {
     e.preventdefault();
@@ -72,7 +76,7 @@ const FormModal = () => {
             type="number"
             placeholder="0.00"
           />
-          <input className={s.inputDate} type="date" name="date" id="" />
+          <input className={s.inputDate} value={date} onChange={} type="date" name="date" id="" />
         </div>
 
         <input
