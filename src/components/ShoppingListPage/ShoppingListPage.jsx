@@ -15,7 +15,7 @@ import { openModal, closeModal } from "../../redux/modal/modalSlice";
 
 const ShoppingListPage = () => {
   const dispatch = useDispatch();
-  const { isOpen } = useSelector((store) => store.modal);
+  const { isOpen } = useSelector((store) => store.toggleModal);
   return (
     <>
       <div className={s.header}>

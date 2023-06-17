@@ -6,12 +6,13 @@ const FormModal = () => {
   const [checked, setChecked] = useState(false);
   const [categories, setCategories] = useState("");
   const [money, setMoney] = useState(0);
-    const [comments, setComments] = useState("");
-    const [date, setDate] = useState(0);
+  const [comments, setComments] = useState("");
+  const [date, setDate] = useState(0);
   console.log(checked);
   console.log(categories);
   console.log(money);
   console.log(comments);
+  console.log(date);
 
   const ChangeFormSwitch = (nextChecked) => {
     setChecked(nextChecked);
@@ -27,18 +28,18 @@ const FormModal = () => {
 
   const handleChangeComments = (e) => {
     setComments(e.target.value);
-    };
-    const handleChangeDate = e => {
-        setDate(e.target.value)
-    }
+  };
+  const handleChangeDate = (e) => {
+    setDate(e.target.value);
+  };
 
-  const handleFormSubmit = (e) => {
-    e.preventdefault();
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
   };
 
   return (
     <>
-      <form onSubmit={handleFormSubmit} className={s.form__module} action="">
+      <form onSubmit={handleFormSubmit} className={s.form__module}>
         <Switch
           height={40}
           width={80}
@@ -76,7 +77,14 @@ const FormModal = () => {
             type="number"
             placeholder="0.00"
           />
-          <input className={s.inputDate} value={date} onChange={} type="date" name="date" id="" />
+          <input
+            className={s.inputDate}
+            value={date}
+            onChange={handleChangeDate}
+            type="date"
+            name="date"
+            id=""
+          />
         </div>
 
         <input
