@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Switch from "react-switch";
 import s from "../FormModal/FormModal.module.css";
-import { useDispatch } from "react-redux";
 
 const FormModal = () => {
   const [checked, setChecked] = useState(false);
@@ -18,8 +17,6 @@ const FormModal = () => {
   const ChangeFormSwitch = (nextChecked) => {
     setChecked(nextChecked);
   };
-
-  const dispatch = useDispatch();
 
   const handleChangeCategories = (e) => {
     setCategories(e.target.value);
