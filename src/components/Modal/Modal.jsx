@@ -3,7 +3,7 @@ import { createPortal } from "react-dom";
 import { useEffect } from "react";
 import s from "../Modal/Modal.module.css";
 import { useDispatch } from "react-redux";
-import { closeModal } from "../../redux/modal/modalSlice";
+import { closeModal } from "../../redux/modal/reducer/modalSlice";
 
 const modalRoot = document.querySelector("#modal-root");
 

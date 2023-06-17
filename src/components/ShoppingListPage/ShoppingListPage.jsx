@@ -11,7 +11,7 @@ import FormModal from "../FormModal/FormModal";
 import { AiFillPlusCircle } from "react-icons/ai";
 import { VscChromeClose } from "react-icons/vsc";
 
-import { openModal, closeModal } from "../../redux/modal/modalSlice";
+import { openModal, closeModal } from "../../redux/modal/reducer/modalSlice";
 
 const ShoppingListPage = () => {
   const dispatch = useDispatch();
