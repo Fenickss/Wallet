@@ -1,25 +1,32 @@
 import { useState } from "react";
 import Switch from "react-switch";
 import s from "../FormModal/FormModal.module.css";
+import { useDispatch, useSelector } from "react-redux";
+import * as action from "../../redux/modal/reducer/modal-action";
 
 const FormModal = () => {
   const [checked, setChecked] = useState(false);
-  const [categories, setCategories] = useState("");
+
+  const { categories } = useSelector((state) => state.dateModal);
+
   const [money, setMoney] = useState(0);
   const [comments, setComments] = useState("");
   const [date, setDate] = useState(0);
   console.log(checked);
   console.log(categories);
+
   console.log(money);
   console.log(comments);
   console.log(date);
 
-  const ChangeFormSwitch = (nextChecked) => {
-    setChecked(nextChecked);
+  const dispatch = useDispatch();
+
+  const ChangeFormSwitch = (checked) => {
+    setChecked(checked);
   };
 
   const handleChangeCategories = (e) => {
-    setCategories(e.target.value);
+    dispatch(action.handleChangeCategories(e.target.value));
   };
 
   const handleChangeMoney = (e) => {

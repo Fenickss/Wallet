@@ -1,5 +1,5 @@
 import { createAction } from "@reduxjs/toolkit";
 
-const handleChangeCategories = createAction("modal/handleChangeCategories");
+const handleChangeCategories = createAction("dateModal/handleChangeCategories");
 
-export default { handleChangeCategories };
+export { handleChangeCategories };

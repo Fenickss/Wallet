@@ -1,8 +1,8 @@
 import { combineReducers, createReducer } from "@reduxjs/toolkit";
-import handleChangeCategories from "../reducer/modal-action";
+import * as action from "./modal-action";
 
 const categoriesReducer = createReducer("", {
-  [handleChangeCategories]: (state, { payload }) => state + payload,
+  [action.handleChangeCategories]: (_, { payload }) => payload,
 });
 
 const moneyReducer = createReducer(0, {});
