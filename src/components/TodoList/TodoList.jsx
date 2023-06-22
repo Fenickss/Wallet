@@ -1,7 +1,8 @@
-import React from 'react';
-import s from './TodoList.module.css';
+import { useSelector } from "react-redux";
+import s from "./TodoList.module.css";
 
 const TodoList = () => {
+  useSelector;
   return (
     <>
       <div className={s.todoList__position}>

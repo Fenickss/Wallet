@@ -1,6 +1,5 @@
-import React from 'react';
-import s from './InitialPage.module.css';
-import frameImg from '../../image/Frame.jpg';
+import s from "./InitialPage.module.css";
+import frameImg from "../../image/Frame.jpg";
 
 const InitialPage = () => {
   return (

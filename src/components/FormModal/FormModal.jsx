@@ -8,36 +8,19 @@ const FormModal = () => {
   const [checked, setChecked] = useState(false);
 
   const { categories } = useSelector((state) => state.dateModal);
+  const { money } = useSelector((state) => state.dateModal);
+  const { date } = useSelector((state) => state.dateModal);
+  const { comments } = useSelector((state) => state.dateModal);
 
-  const [money, setMoney] = useState(0);
-  const [comments, setComments] = useState("");
-  const [date, setDate] = useState(0);
   console.log(checked);
   console.log(categories);
-
   console.log(money);
-  console.log(comments);
   console.log(date);
-
+  console.log(comments);
   const dispatch = useDispatch();
 
   const ChangeFormSwitch = (checked) => {
     setChecked(checked);
-  };
-
-  const handleChangeCategories = (e) => {
-    dispatch(action.handleChangeCategories(e.target.value));
-  };
-
-  const handleChangeMoney = (e) => {
-    setMoney(e.target.value);
-  };
-
-  const handleChangeComments = (e) => {
-    setComments(e.target.value);
-  };
-  const handleChangeDate = (e) => {
-    setDate(e.target.value);
   };
 
   const handleFormSubmit = (event) => {
@@ -61,7 +44,9 @@ const FormModal = () => {
           <select
             name=""
             value={categories}
-            onChange={handleChangeCategories}
+            onChange={(e) =>
+              dispatch(action.handleChangeCategories(e.target.value))
+            }
             className={s.selectCategories}
           >
             <option className={s.initialSelected} value="">
@@ -70,7 +55,7 @@ const FormModal = () => {
             <option value="food">Еда</option>
             <option value="auto">Авто</option>
             <option value="children">Дети</option>
-            <option value="haus">Дом</option>
+            <option value="house">Дом</option>
             <option value="education">Образование</option>
             <option value="rest">Остальные</option>
           </select>
@@ -80,14 +65,14 @@ const FormModal = () => {
           <input
             className={s.inputMoney}
             value={money}
-            onChange={handleChangeMoney}
+            onChange={(e) => dispatch(action.handleChangeMoney(e.target.value))}
             type="number"
             placeholder="0.00"
           />
           <input
             className={s.inputDate}
             value={date}
-            onChange={handleChangeDate}
+            onChange={(e) => dispatch(action.handleChangeDate(e.target.value))}
             type="date"
             name="date"
             id=""
@@ -97,7 +82,9 @@ const FormModal = () => {
         <input
           className={s.Form__Comments}
           value={comments}
-          onChange={handleChangeComments}
+          onChange={(e) =>
+            dispatch(action.handleChangeComments(e.target.value))
+          }
           type="text"
           name=""
           placeholder="Комментарий"
